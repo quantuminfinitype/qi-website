@@ -1,24 +1,21 @@
 @import "tailwindcss";
 
-@theme {
-  --color-qi-bg: #070b18;
-  --color-qi-surface: #0d1220;
-  --color-qi-cyan: #00d4ff;
-  --color-qi-purple: #7c3aed;
-  --color-qi-border: rgba(0, 212, 255, 0.25);
-
-  --font-family-display: "eurostile", "Arial Narrow", sans-serif;
-  --font-family-body: "eurostile", "Inter", sans-serif;
+:root {
+  --qi-bg: #070b18;
+  --qi-surface: #0d1220;
+  --qi-cyan: #00d4ff;
+  --qi-purple: #7c3aed;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: #070b18;
+  background-color: var(--qi-bg);
   color: white;
-  font-family: var(--font-family-body);
+  font-family: "eurostile", "Arial Narrow", sans-serif;
+  margin: 0;
 }
 
 .gradient-text {
@@ -28,62 +25,58 @@ body {
   background-clip: text;
 }
 
-.btn-outline {
+.btn-cyan {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 1.5px solid #00d4ff;
   color: white;
-  padding: 0.6rem 2rem;
+  padding: 0.65rem 2.5rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-family: "eurostile", sans-serif;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: background 0.2s, color 0.2s;
+  text-decoration: none;
 }
+.btn-cyan:hover { background: #00d4ff; color: #070b18; }
 
-.btn-outline:hover {
-  background: #00d4ff;
-  color: #070b18;
-}
-
-.btn-solid {
+.btn-ghost {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border: 1.5px solid rgba(255,255,255,0.3);
   color: white;
-  padding: 0.6rem 2rem;
+  padding: 0.65rem 2.5rem;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-family: "eurostile", sans-serif;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
 }
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
 
-.btn-solid:hover {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.card-dark {
-  background: rgba(13, 18, 32, 0.8);
-  border: 1px solid rgba(0, 212, 255, 0.15);
-  border-radius: 0.75rem;
-}
-
-.section-tag {
+.tag {
   display: inline-flex;
   align-items: center;
   border: 1px solid #00d4ff;
   color: #00d4ff;
-  padding: 0.35rem 1.25rem;
+  padding: 0.4rem 1.4rem;
   border-radius: 9999px;
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+
+.card {
+  background: rgba(13, 18, 32, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.12);
+  border-radius: 12px;
+}
+.card:hover { border-color: rgba(0, 212, 255, 0.35); }
