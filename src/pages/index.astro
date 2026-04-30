@@ -23,7 +23,7 @@ const services = [
 
 const values = [
   { num: '01', title: 'Nada\nes relleno',       desc: 'Hasta lo que no se ve' },
-  { num: '02', title: 'Hecho para\nvivirse',     desc: 'Cada decisión empieza por la experiencia' },
+  { num: '02', title: 'Hecho para\nvivirse',     desc: 'Cada decisión empieza por\nla experiencia' },
   { num: '03', title: 'Bueno no es\nsuficiente', desc: 'El estándar no se negocia' },
 ];
 
@@ -37,188 +37,358 @@ const brands = [
 
 <Layout title="Quantum Infinity — Entertainment Powered by Gaming">
 
-<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
-<section style="position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:120px 40px 0;overflow:hidden;">
-
-  <div style="position:relative;z-index:10;max-width:1000px;width:100%;display:flex;flex-direction:column;align-items:center;">
-
-    <!-- tag pill -->
-    <span style="display:inline-flex;align-items:center;border:1.5px solid #40DCFF;color:#40DCFF;padding:14px 40px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:48px;">
-      No existen recetas secretas
-    </span>
-
-    <!-- main title -->
-    <h1 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(3.8rem,10vw,9.5rem);text-transform:uppercase;line-height:0.88;letter-spacing:-0.01em;margin:0;width:100%;">
-      <span class="gradient-text" style="display:block;">Entertainment</span>
-      <span style="color:white;display:block;">Powered by Gaming</span>
-    </h1>
+<!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+<section style="
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:109px 182px 0;
+  overflow:hidden;
+">
+  <!-- tag pill -->
+  <div style="
+    display:inline-flex;align-items:center;
+    border:2px solid #40DCFF;
+    color:#40DCFF;
+    padding:20px 47px;
+    border-radius:92px;
+    font-family:'eurostile',sans-serif;
+    font-size:0.78rem;
+    font-weight:500;
+    letter-spacing:0.01em;
+    text-transform:uppercase;
+    margin-bottom:63px;
+  ">
+    no existen recetas secretas
   </div>
 
-  <!-- GAMING ES section — ghost words behind foreground text -->
-  <div style="position:relative;width:100%;max-width:1000px;margin-top:56px;padding-bottom:80px;">
+  <!-- main title: Entertainment + Powered by Gaming -->
+  <h1 style="
+    font-family:'eurostile',sans-serif;
+    font-weight:900;
+    font-size:clamp(3.5rem,8.5vw,8.2rem);
+    text-transform:uppercase;
+    line-height:0.88;
+    letter-spacing:0;
+    margin:0;
+    width:100%;
+    max-width:900px;
+  ">
+    <span class="gradient-text" style="display:block;">Entertainment</span>
+    <span style="color:white;display:block;">Powered by Gaming</span>
+  </h1>
 
-    <!-- ghost words background -->
-    <div aria-hidden="true" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;user-select:none;gap:0;">
-      <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.6rem,4.5vw,4rem);letter-spacing:0.04em;text-transform:uppercase;color:rgba(255,255,255,0.04);line-height:1.2;">CULTURA</div>
-      <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.6rem,4.5vw,4rem);letter-spacing:0.04em;text-transform:uppercase;color:rgba(255,255,255,0.06);line-height:1.2;">EXPERIENCIA</div>
-      <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.6rem,4.5vw,4rem);letter-spacing:0.04em;text-transform:uppercase;color:rgba(255,255,255,0.04);line-height:1.2;">ENTRETENIMIENTO</div>
-      <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.6rem,4.5vw,4rem);letter-spacing:0.04em;text-transform:uppercase;color:rgba(255,255,255,0.03);line-height:1.2;">COMUNIDAD</div>
-      <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.6rem,4.5vw,4rem);letter-spacing:0.04em;text-transform:uppercase;color:rgba(255,255,255,0.025);line-height:1.2;">CREATIVIDAD</div>
-    </div>
+  <!-- ── GAMING ES / ghost words section ── -->
+  <!--
+    Figma layout: HORIZONTAL flex, centered
+    Left: "GAMING ES" white 40px Bold
+    Right: 5-word stack, ENTRETENIMIENTO highlighted cyan, others faded
+    Gap between: 10px
+  -->
+  <div style="
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(6px,0.85vw,12px);
+    margin-top:clamp(40px,5vw,72px);
+    padding-bottom:clamp(50px,6vw,90px);
+  ">
+    <!-- GAMING ES -->
+    <p style="
+      font-family:'eurostile',sans-serif;
+      font-weight:700;
+      font-size:clamp(1.4rem,3.4vw,2.5rem);
+      text-transform:uppercase;
+      letter-spacing:0;
+      color:white;
+      line-height:1;
+      flex-shrink:0;
+    ">Gaming es</p>
 
-    <!-- foreground "GAMING ES" text -->
-    <div style="position:relative;z-index:10;text-align:center;padding:32px 0;">
-      <p style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.4rem,3.5vw,2.8rem);text-transform:uppercase;letter-spacing:0.03em;color:white;line-height:1;">
-        Gaming es <span style="color:#40DCFF;">Entretenimiento</span>
-      </p>
+    <!-- 5-word stack: 2 faded above · ENTRETENIMIENTO bright · 2 faded below -->
+    <div style="
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      font-family:'eurostile',sans-serif;
+      font-weight:700;
+      font-size:clamp(1.4rem,3.4vw,2.5rem);
+      text-transform:uppercase;
+      letter-spacing:0.015em;
+      line-height:1.05;
+    ">
+      <span style="color:rgba(255,255,255,0.07);">Cultura</span>
+      <span style="color:rgba(255,255,255,0.16);">Experiencia</span>
+      <span style="color:#40DCFF;">Entretenimiento</span>
+      <span style="color:rgba(255,255,255,0.16);">Comunidad</span>
+      <span style="color:rgba(255,255,255,0.07);">Creatividad</span>
     </div>
   </div>
 
-  <!-- scroll indicator -->
-  <a href="#nosotros" aria-label="Scroll" style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);animation:bounce 2s infinite;opacity:0.5;z-index:20;">
+  <!-- scroll chevron -->
+  <a href="#nosotros" aria-label="Scroll" style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);animation:bounce 2s infinite;opacity:0.5;">
     <svg width="18" height="18" fill="none" stroke="#40DCFF" stroke-width="2" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
     </svg>
   </a>
 </section>
 
-<!-- ═══════════════════════════════════ VALUES ════════════════════════════════ -->
-<section id="nosotros" style="padding:80px 40px 100px;">
-  <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+<!-- ════════════════════════════════ VALUES ══════════════════════════════════ -->
+<!--
+  Figma: T22 R100 B20 L100 padding, HORIZONTAL, gap=20
+  Cards: rgba(15,14,21,0.5) fill, rgba(55,55,55,1) 2px border, radius=18
+  Inner: T37 R32 B60 L32, gap=17
+  Number: 25px Heavy #40DCFF, letterSpacing=1%, lineHeight=31px
+  Title: 25px Heavy white, UPPER, letterSpacing=1%, lineHeight=25px
+  Desc: 20px Medium rgba(159,159,159), letterSpacing=0%
+-->
+<section id="nosotros" style="padding:22px 100px 20px;">
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
     {values.map(v => (
-      <div style="background:rgba(15,14,21,0.5);border:1px solid rgba(64,220,255,0.18);border-radius:18px;padding:37px 32px 60px;transition:border-color 0.3s;"
-        onmouseover="this.style.borderColor='rgba(64,220,255,0.4)'" onmouseout="this.style.borderColor='rgba(64,220,255,0.18)'">
-        <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:1.1rem;color:#40DCFF;letter-spacing:0.1em;margin-bottom:20px;">{v.num}</div>
-        <h3 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;color:white;line-height:1.15;margin:0 0 16px;letter-spacing:0.01em;white-space:pre-line;">{v.title}</h3>
-        <p style="font-family:'eurostile',sans-serif;font-size:0.9rem;color:rgb(159,159,159);line-height:1.65;margin:0;">{v.desc}</p>
-      </div>
-    ))}
-  </div>
-</section>
-
-<!-- ════════════════════════════════ SERVICES ════════════════════════════════ -->
-<section id="servicios" style="padding:20px 40px 100px;">
-  <div style="max-width:1120px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:20px;">
-      <span style="display:inline-flex;align-items:center;border:1.5px solid #40DCFF;color:#40DCFF;padding:14px 40px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">
-        Nuestro diferencial
-      </span>
-    </div>
-    <h2 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.6rem);text-transform:uppercase;text-align:center;color:white;letter-spacing:0.01em;line-height:1;margin:28px 0 40px;">
-      Lo que hacemos mejor que nadie
-    </h2>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
-      {services.map(s => (
-        <div class="service-tile" style="position:relative;overflow:hidden;border-radius:18px;cursor:pointer;">
-          <img src={`${b}/images/services/${s.key}.png`} alt={s.label}
-            style="width:100%;height:280px;object-fit:cover;display:block;transition:transform 0.6s ease;" />
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 50%,transparent 100%);"></div>
-          <div style="position:absolute;bottom:0;left:0;padding:22px 26px;display:flex;align-items:flex-end;gap:10px;">
-            <span style="color:#40DCFF;font-weight:900;font-size:1rem;line-height:1;flex-shrink:0;">{s.icon}</span>
-            <span style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(0.85rem,1.5vw,1.05rem);text-transform:uppercase;color:white;letter-spacing:0.06em;line-height:1.2;white-space:pre-line;">{s.label}</span>
-          </div>
+      <div style="
+        background:rgba(15,14,21,0.5);
+        border:2px solid rgba(55,55,55,1);
+        border-radius:18px;
+        padding:37px 32px 60px;
+        display:flex;flex-direction:column;gap:17px;
+        transition:border-color 0.3s;
+      "
+        onmouseover="this.style.borderColor='rgba(64,220,255,0.4)'"
+        onmouseout="this.style.borderColor='rgba(55,55,55,1)'">
+        <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:1.3rem;color:#40DCFF;letter-spacing:0.01em;line-height:1.24;">
+          {v.num}
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════════════ STATS ═══════════════════════════════════ -->
-<section style="padding:100px 40px;border-top:1px solid rgba(255,255,255,0.06);">
-  <div style="max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center;">
-    {stats.map(s => (
-      <div>
-        <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(4rem,9vw,7.5rem);color:#40DCFF;line-height:1;letter-spacing:-0.02em;">{s.value}</div>
-        <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.22em;color:white;margin-top:10px;">{s.label}</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <h3 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;color:white;line-height:1;letter-spacing:0.01em;white-space:pre-line;margin:0;">
+            {v.title}
+          </h3>
+          <p style="font-family:'eurostile',sans-serif;font-weight:500;font-size:0.9rem;color:rgb(159,159,159);line-height:1.05;margin:0;white-space:pre-line;">
+            {v.desc}
+          </p>
+        </div>
       </div>
     ))}
   </div>
 </section>
 
-<!-- ════════════════════════════════ CLIENTS ═════════════════════════════════ -->
-<section style="padding:60px 40px 80px;">
-  <div style="max-width:1000px;margin:0 auto;">
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px 48px;margin-bottom:60px;">
-      {clients.map(c => (
-        <img src={`${b}/images/clients/${c}.svg`} alt={c}
-          style="height:18px;object-fit:contain;opacity:0.45;filter:brightness(10);transition:opacity 0.3s;cursor:default;"
-          onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='0.45'" />
-      ))}
-    </div>
+<!-- ══════════════════════════════ SERVICES ══════════════════════════════════ -->
+<!--
+  Figma: T31 R120 B77 L120 padding, VERTICAL, gap=41
+  Tag pill: border rgba(64,220,255,1) ~1.6px, radius=73.6, T16 R38 B16 L38
+            16px Medium #40DCFF UPPER
+  Title: 40px Black white UPPER lineHeight≈36px
+  Grid: 2×2, tiles 457×218, gap H=25 V=30, radius=18
+-->
+<section id="servicios" style="padding:31px 120px 77px;">
+  <div style="display:flex;flex-direction:column;gap:41px;">
+
+    <!-- tag -->
     <div style="text-align:center;">
-      <a href="#portafolio" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid #40DCFF;color:white;padding:16px 48px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,color 0.2s;"
-        onmouseover="this.style.background='#40DCFF';this.style.color='#000'" onmouseout="this.style.background='transparent';this.style.color='white'">
-        Ver portafolio de experiencias
-      </a>
+      <span style="
+        display:inline-flex;align-items:center;
+        border:1.6px solid #40DCFF;
+        color:#40DCFF;
+        padding:16px 38px;
+        border-radius:74px;
+        font-family:'eurostile',sans-serif;
+        font-size:0.72rem;
+        font-weight:500;
+        letter-spacing:0.01em;
+        text-transform:uppercase;
+      ">Nuestro diferencial</span>
+    </div>
+
+    <!-- title + grid -->
+    <div style="display:flex;flex-direction:column;gap:50px;">
+      <h2 style="
+        font-family:'eurostile',sans-serif;
+        font-weight:900;
+        font-size:clamp(1.8rem,3.4vw,2.5rem);
+        text-transform:uppercase;
+        text-align:center;
+        color:white;
+        letter-spacing:0;
+        line-height:0.9;
+        margin:0;
+      ">Lo que hacemos mejor que nadie</h2>
+
+      <!-- 2×2 tile grid -->
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:25px 30px;">
+        {services.map(s => (
+          <div class="svc-tile" style="position:relative;overflow:hidden;border-radius:18px;cursor:pointer;height:218px;">
+            <img src={`${b}/images/services/${s.key}.png`} alt={s.label}
+              style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;" />
+            <div style="position:absolute;inset:0;background:rgba(0,0,0,0.30);"></div>
+            <div style="position:absolute;bottom:0;left:0;padding:22px 26px;display:flex;align-items:flex-end;gap:10px;">
+              <span style="color:#40DCFF;font-weight:900;font-size:1rem;line-height:1;flex-shrink:0;">{s.icon}</span>
+              <span style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(0.8rem,1.4vw,1rem);text-transform:uppercase;color:white;letter-spacing:0.05em;line-height:1.2;white-space:pre-line;">{s.label}</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════ QUANTUM STUDIOS ════════════════════════════ -->
-<section style="overflow:hidden;margin:0 0 0;">
-  <div style="display:grid;grid-template-columns:42fr 58fr;min-height:420px;max-width:100%;">
+<!-- ══════════════════════════════ STATS ═════════════════════════════════════ -->
+<!--
+  Figma Page 2: stats at y=119, x=229, w=723, h=93
+  3 groups: gap=93px
+  Numbers: large cyan, labels: white uppercase small
+-->
+<section style="padding:119px 0 80px;border-top:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:723px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;text-align:center;">
+    {stats.map((s, i) => (
+      <div style={i < 2 ? "padding:0 46px 0 0;border-right:1px solid rgba(255,255,255,0.08);" : "padding:0 0 0 46px;"}>
+        <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(3.5rem,7.5vw,6.5rem);color:#40DCFF;line-height:1;letter-spacing:-0.02em;">{s.value}</div>
+        <div style="font-family:'eurostile',sans-serif;font-weight:900;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.2em;color:white;margin-top:10px;">{s.label}</div>
+      </div>
+    ))}
+  </div>
+</section>
 
-    <!-- text side -->
-    <div style="padding:72px 64px;display:flex;flex-direction:column;justify-content:center;background:rgba(4,6,16,0.85);">
-      <h2 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(1.6rem,3vw,2.4rem);text-transform:uppercase;color:white;line-height:1;letter-spacing:0.02em;margin:0 0 16px;">Quantum Studios</h2>
-      <p style="font-family:'eurostile',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.8;margin:0 0 36px;">
+<!-- ══════════════════════════════ CLIENTS ═══════════════════════════════════ -->
+<!--
+  Figma Page 2: logos grid x=187, w=807
+  CTA button below
+-->
+<section style="padding:0 187px 80px;">
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 48px;margin-bottom:53px;">
+    {clients.map(c => (
+      <img src={`${b}/images/clients/${c}.svg`} alt={c}
+        style="height:18px;object-fit:contain;opacity:0.45;filter:brightness(10);transition:opacity 0.3s;"
+        onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='0.45'" />
+    ))}
+  </div>
+  <div style="text-align:center;">
+    <a href="#portafolio" style="
+      display:inline-flex;align-items:center;justify-content:center;
+      border:2px solid #40DCFF;color:white;
+      padding:20px 56px;border-radius:124px;
+      font-family:'eurostile',sans-serif;font-size:0.68rem;font-weight:700;
+      letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;
+      transition:background 0.2s,color 0.2s;
+    "
+      onmouseover="this.style.background='#40DCFF';this.style.color='#000'"
+      onmouseout="this.style.background='transparent';this.style.color='white'">
+      Ver portafolio de experiencias
+    </a>
+  </div>
+</section>
+
+<!-- ════════════════════════════ QUANTUM STUDIOS ═════════════════════════════ -->
+<!--
+  Figma: full-width 1181×421, text panel T80 R110 B80 L110
+  Image starts at x=231 (shifted right, taking ~80% of width)
+  VER ESTUDIO button: rgba(15,14,21,0.5) fill, rgba(55,55,55,1) 2px, radius=107
+-->
+<section style="overflow:hidden;width:100%;">
+  <div style="display:grid;grid-template-columns:38fr 62fr;min-height:421px;">
+    <!-- text panel -->
+    <div style="padding:80px 110px;display:flex;flex-direction:column;justify-content:center;background:rgba(4,5,16,0.75);">
+      <h2 style="
+        font-family:'eurostile',sans-serif;font-weight:900;
+        font-size:clamp(1.4rem,2.5vw,2rem);
+        text-transform:uppercase;color:white;
+        line-height:1;letter-spacing:0.02em;margin:0 0 14px;
+      ">Quantum Studios</h2>
+      <p style="font-family:'eurostile',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.45);line-height:1.75;margin:0 0 38px;">
         Un espacio para crear sin límites.<br/>Ubicado en el corazón de Lima, Perú.
       </p>
       <div>
-        <a href="#contacto" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,0.3);color:white;padding:14px 36px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;background:rgba(15,14,21,0.5);transition:border-color 0.2s;"
-          onmouseover="this.style.borderColor='rgba(255,255,255,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)'">
+        <a href="#contacto" style="
+          display:inline-flex;align-items:center;justify-content:center;
+          background:rgba(15,14,21,0.5);
+          border:2px solid rgba(55,55,55,1);
+          color:white;padding:14px 36px;border-radius:107px;
+          font-family:'eurostile',sans-serif;font-size:0.65rem;font-weight:700;
+          letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;
+          transition:border-color 0.2s;
+        "
+          onmouseover="this.style.borderColor='rgba(255,255,255,0.5)'"
+          onmouseout="this.style.borderColor='rgba(55,55,55,1)'">
           Ver estudio
         </a>
       </div>
     </div>
-
-    <!-- photo side -->
+    <!-- photo -->
     <div style="position:relative;overflow:hidden;">
       <img src={`${b}/images/quantum-studios.png`} alt="Quantum Studios"
         style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
-      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,6,16,0.6) 0%,transparent 35%);"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(4,5,16,0.55) 0%,transparent 30%);"></div>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════ STAGE 01 ════════════════════════════════ -->
-<section style="padding:100px 40px;text-align:center;background:rgba(4,5,14,0.7);">
-  <div style="max-width:1120px;margin:0 auto;">
+<!--
+  Figma: stage01 vector x=404 w=374 h=109
+  Tag: radius=87, stroke #40DCFF 2px, T16 R40, text "el poder de crear..."
+  Brand cards: gap=47px, inside Frame 58 x=120 w=941
+-->
+<section style="padding:95px 120px;text-align:center;background:rgba(3,4,12,0.6);">
+  <div style="max-width:1000px;margin:0 auto;">
+    <!-- Stage 01 logo -->
     <img src={`${b}/images/brands/stage01.svg`} alt="Stage 01"
-      style="height:72px;margin:0 auto 32px;display:block;object-fit:contain;filter:brightness(10);opacity:0.9;" />
+      style="height:80px;margin:0 auto 32px;display:block;object-fit:contain;filter:brightness(10);opacity:0.9;" />
 
-    <span style="display:inline-flex;align-items:center;border:1.5px solid #40DCFF;color:#40DCFF;padding:14px 40px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">
-      El poder de crear, conectar y entretener
-    </span>
+    <!-- tag pill -->
+    <span style="
+      display:inline-flex;align-items:center;
+      border:2px solid #40DCFF;color:#40DCFF;
+      padding:16px 40px;border-radius:87px;
+      font-family:'eurostile',sans-serif;font-size:0.68rem;font-weight:700;
+      letter-spacing:0.15em;text-transform:uppercase;
+    ">El poder de crear, conectar y entretener</span>
 
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px;">
+    <!-- brand cards: gap=47px -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:47px;margin-top:56px;align-items:start;">
       {brands.map(br => (
-        <div style="background:rgba(15,14,21,0.5);border:1px solid rgba(64,220,255,0.12);border-radius:18px;padding:40px 20px 36px;text-align:center;transition:border-color 0.3s;"
-          onmouseover="this.style.borderColor='rgba(64,220,255,0.35)'" onmouseout="this.style.borderColor='rgba(64,220,255,0.12)'">
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;">
           <img src={`${b}/images/brands/${br.key}.svg`} alt={br.name}
-            style="height:34px;margin:0 auto 20px;display:block;object-fit:contain;filter:brightness(10);" />
-          <p style="font-family:'eurostile',sans-serif;font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:white;margin:0 0 8px;">{br.role}</p>
-          <p style="font-family:'eurostile',sans-serif;font-size:0.6rem;color:rgba(255,255,255,0.3);letter-spacing:0.02em;">{br.tags}</p>
+            style="height:34px;object-fit:contain;filter:brightness(10);display:block;" />
+          <p style="font-family:'eurostile',sans-serif;font-weight:700;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.05em;color:white;margin:0;">{br.role}</p>
+          <p style="font-family:'eurostile',sans-serif;font-size:0.58rem;color:rgba(255,255,255,0.3);letter-spacing:0.02em;margin:0;">{br.tags}</p>
         </div>
       ))}
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════ PORTFOLIO ═══════════════════════════════ -->
+<!-- ═══════════════════════════════ PORTFOLIO ═════════════════════════════════ -->
 <section id="portafolio" style="padding:120px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05);">
   <div style="max-width:760px;margin:0 auto;">
-    <span style="display:inline-flex;align-items:center;border:1.5px solid #40DCFF;color:#40DCFF;padding:12px 36px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:32px;">
-      Portafolio
-    </span>
-    <h2 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(2.8rem,7vw,5.5rem);text-transform:uppercase;line-height:0.9;letter-spacing:0.01em;margin:0 0 24px;">
+    <span style="
+      display:inline-flex;align-items:center;
+      border:1.6px solid #40DCFF;color:#40DCFF;
+      padding:14px 38px;border-radius:74px;
+      font-family:'eurostile',sans-serif;font-size:0.68rem;font-weight:500;
+      letter-spacing:0.15em;text-transform:uppercase;margin-bottom:32px;
+    ">Portafolio</span>
+    <h2 style="
+      font-family:'eurostile',sans-serif;font-weight:900;
+      font-size:clamp(2.8rem,7vw,5.5rem);
+      text-transform:uppercase;line-height:0.9;letter-spacing:0;margin:0 0 24px;display:block;
+    ">
       Experiencias que<br/><span class="gradient-text">dejan huella</span>
     </h2>
     <p style="font-family:'eurostile',sans-serif;font-size:0.82rem;color:rgba(255,255,255,0.38);max-width:480px;margin:0 auto 52px;line-height:1.8;">
       Más de 300 proyectos para las marcas más importantes del ecosistema gaming y entretenimiento en Latinoamérica.
     </p>
-    <a href="#contacto" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid #40DCFF;color:white;padding:16px 48px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,color 0.2s;"
-      onmouseover="this.style.background='#40DCFF';this.style.color='#000'" onmouseout="this.style.background='transparent';this.style.color='white'">
+    <a href="#contacto" style="
+      display:inline-flex;align-items:center;justify-content:center;
+      border:2px solid #40DCFF;color:white;
+      padding:20px 56px;border-radius:124px;
+      font-family:'eurostile',sans-serif;font-size:0.68rem;font-weight:700;
+      letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;
+      transition:background 0.2s,color 0.2s;
+    "
+      onmouseover="this.style.background='#40DCFF';this.style.color='#000'"
+      onmouseout="this.style.background='transparent';this.style.color='white'">
       Solicitar portafolio completo
     </a>
   </div>
@@ -226,37 +396,26 @@ const brands = [
 
 <!-- ════════════════════════════════ CONTACT ═════════════════════════════════ -->
 <section id="contacto" style="position:relative;padding:140px 40px;text-align:center;overflow:hidden;min-height:80vh;display:flex;align-items:center;justify-content:center;">
-
   <!-- giant decorative Q -->
   <div aria-hidden="true" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
-    <svg viewBox="0 0 400 400" style="width:min(680px,90vw);height:min(680px,90vw);opacity:0.035;" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 400 400" style="width:min(680px,90vw);height:min(680px,90vw);opacity:0.04;" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M200 40C111.6 40 40 111.6 40 200C40 288.4 111.6 360 200 360C245.2 360 286.2 341.6 316 312L340 336L360 316L336 292C354 263.2 364 229 364 200C364 111.6 288.4 40 200 40ZM200 320C133.7 320 80 266.3 80 200C80 133.7 133.7 80 200 80C266.3 80 320 133.7 320 200C320 226.8 311.4 251.6 296.6 271.6L264 239L244 259L276.6 291.6C257.4 308.6 232.8 320 200 320Z" fill="white"/>
     </svg>
   </div>
-
   <div style="position:relative;z-index:10;max-width:660px;width:100%;">
-    <h2 style="font-family:'eurostile',sans-serif;font-weight:900;font-size:clamp(3rem,8vw,6.5rem);text-transform:uppercase;line-height:0.88;letter-spacing:0em;margin:0 0 60px;">
+    <h2 style="
+      font-family:'eurostile',sans-serif;font-weight:900;
+      font-size:clamp(3rem,8vw,6.5rem);
+      text-transform:uppercase;line-height:0.88;letter-spacing:0;margin:0 0 60px;
+    ">
       Hagamos algo<br/>
       <span class="gradient-text">Épico</span>
       <span style="color:white;"> Juntos</span>
     </h2>
-
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="https://wa.me/51999999999" target="_blank" rel="noopener"
-        style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,0.3);color:white;padding:16px 44px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
-        onmouseover="this.style.borderColor='white';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.background='transparent'">
-        WhatsApp
-      </a>
-      <a href="mailto:hola@qi.pe"
-        style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,0.3);color:white;padding:16px 44px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
-        onmouseover="this.style.borderColor='white';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.background='transparent'">
-        Email
-      </a>
-      <a href="https://t.me/quantuminfinity" target="_blank" rel="noopener"
-        style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,0.3);color:white;padding:16px 44px;border-radius:9999px;font-family:'eurostile',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;transition:border-color 0.2s,background 0.2s;"
-        onmouseover="this.style.borderColor='white';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.3)';this.style.background='transparent'">
-        Telegram
-      </a>
+      <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="btn-ghost">WhatsApp</a>
+      <a href="mailto:hola@qi.pe" class="btn-ghost">Email</a>
+      <a href="https://t.me/quantuminfinity" target="_blank" rel="noopener" class="btn-ghost">Telegram</a>
     </div>
   </div>
 </section>
@@ -268,17 +427,5 @@ const brands = [
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50%       { transform: translateX(-50%) translateY(8px); }
   }
-  .service-tile:hover img { transform: scale(1.04); }
-
-  @media (max-width: 768px) {
-    /* values */
-    #nosotros > div { grid-template-columns: 1fr !important; }
-    /* services */
-    #servicios .service-grid { grid-template-columns: 1fr !important; }
-    /* stage01 brands */
-    .brands-grid { grid-template-columns: repeat(2,1fr) !important; }
-    /* quantum studios */
-    .studios-grid { grid-template-columns: 1fr !important; }
-    .studios-img { min-height: 260px; }
-  }
+  .svc-tile:hover img { transform: scale(1.04); }
 </style>

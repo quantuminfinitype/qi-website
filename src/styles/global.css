@@ -3,7 +3,6 @@
 :root {
   --cyan: #40DCFF;
   --purple: #8241DB;
-  --card-bg: rgba(15, 14, 21, 0.5);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -11,26 +10,81 @@ html { scroll-behavior: smooth; }
 
 body {
   background-color: #000;
+  /* subtle square grid */
   background-image:
-    /* top-left cyan blob */
-    radial-gradient(ellipse 55% 40% at -5% 5%, rgba(57,156,198,0.55) 0%, transparent 65%),
-    /* top-right blue blob */
-    radial-gradient(ellipse 50% 35% at 95% 8%, rgba(67,89,196,0.6) 0%, transparent 60%),
-    /* right-side wine blob */
-    radial-gradient(ellipse 40% 30% at 105% 22%, rgba(93,61,81,0.5) 0%, transparent 55%),
-    /* right-side repeat */
-    radial-gradient(ellipse 45% 35% at 100% 65%, rgba(67,89,196,0.45) 0%, transparent 60%),
-    /* center horizontal purple band */
-    radial-gradient(ellipse 90% 8% at 50% 47%, rgba(110,91,178,0.35) 0%, transparent 100%),
-    /* left deep purple */
-    radial-gradient(ellipse 35% 45% at -8% 10%, rgba(76,35,157,0.55) 0%, transparent 60%),
-    /* bottom left purple */
-    radial-gradient(ellipse 35% 30% at -5% 75%, rgba(76,35,157,0.4) 0%, transparent 60%);
+    linear-gradient(rgba(255,255,255,0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.038) 1px, transparent 1px);
+  background-size: 30px 30px;
   color: white;
   font-family: "eurostile", "Arial Narrow", sans-serif;
   overflow-x: hidden;
 }
 
+/* ── Background blob layer ───────────────────────────────────────── */
+#bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Vector 8 — blue, top-right — rgba(67,89,196), blur 500 */
+.b1 {
+  background: rgb(67,89,196);
+  width: 38vw; height: 50vh;
+  right: -4vw; top: -12vh;
+  filter: blur(180px);
+}
+/* Vector 13 — blue, mid-right — rgba(67,89,196), blur 500 */
+.b2 {
+  background: rgb(67,89,196);
+  width: 30vw; height: 38vh;
+  right: -2vw; top: 52vh;
+  filter: blur(180px);
+}
+/* Vector 10 — cyan, top-left — rgba(57,156,198), blur 500 */
+.b3 {
+  background: rgb(57,156,198);
+  width: 22vw; height: 32vh;
+  left: 12vw; top: -12vh;
+  filter: blur(180px);
+}
+/* Vector 11 — wine, right — rgba(93,61,81), blur 500 */
+.b4 {
+  background: rgb(93,61,81);
+  width: 22vw; height: 34vh;
+  right: -5vw; top: 8vh;
+  filter: blur(180px);
+}
+/* Vector 14 — purple band, right — rgba(110,91,178), blur 700 */
+.b5 {
+  background: rgb(110,91,178);
+  width: 11vw; height: 65vh;
+  right: 8vw; top: 36vh;
+  filter: blur(220px);
+}
+/* Vector 9 — deep purple, top-center — rgba(76,35,157), blur 500 */
+.b6 {
+  background: rgb(76,35,157);
+  width: 36vw; height: 30vh;
+  left: 18vw; top: 4vh;
+  filter: blur(180px);
+}
+/* Vector 12 — deep purple, lower-center — rgba(76,35,157), blur 600 */
+.b7 {
+  background: rgb(76,35,157);
+  width: 36vw; height: 28vh;
+  left: 22vw; top: 65vh;
+  filter: blur(200px);
+}
+
+/* ── Gradient text ───────────────────────────────────────────────── */
 .gradient-text {
   background: linear-gradient(90deg, #8BDEE4 0%, #38AFEA 36%, #5B74EF 66%, #8241DB 94%);
   -webkit-background-clip: text;
@@ -38,6 +92,7 @@ body {
   background-clip: text;
 }
 
+/* ── Shared component styles ─────────────────────────────────────── */
 .btn-cyan {
   display: inline-flex;
   align-items: center;
@@ -75,36 +130,3 @@ body {
   white-space: nowrap;
 }
 .btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
-
-.tag {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid #40DCFF;
-  color: #40DCFF;
-  padding: 0.4rem 1.4rem;
-  border-radius: 9999px;
-  font-family: "eurostile", sans-serif;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.card {
-  background: rgba(15, 14, 21, 0.5);
-  border: 1px solid rgba(64, 220, 255, 0.12);
-  border-radius: 17px;
-  transition: border-color 0.3s;
-}
-.card:hover { border-color: rgba(64, 220, 255, 0.35); }
-
-/* decorative horizontal gradient band */
-.gradient-band {
-  background: linear-gradient(180deg,
-    rgba(13,13,13,0) 6%,
-    rgba(42,44,145,0.63) 38%,
-    rgba(112,47,204,1) 52%,
-    rgba(22,61,113,0.67) 60%,
-    rgba(13,13,13,0) 91%
-  );
-}
