@@ -1,1 +1,89 @@
 @import "tailwindcss";
+
+@theme {
+  --color-qi-bg: #070b18;
+  --color-qi-surface: #0d1220;
+  --color-qi-cyan: #00d4ff;
+  --color-qi-purple: #7c3aed;
+  --color-qi-border: rgba(0, 212, 255, 0.25);
+
+  --font-family-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-family-body: "Inter", "Arial", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070b18;
+  color: white;
+  font-family: var(--font-family-body);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00d4ff 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #00d4ff;
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  background: #00d4ff;
+  color: #070b18;
+}
+
+.btn-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 0.6rem 2rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-solid:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.card-dark {
+  background: rgba(13, 18, 32, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 0.75rem;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #00d4ff;
+  color: #00d4ff;
+  padding: 0.35rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
